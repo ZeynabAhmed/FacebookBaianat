@@ -24,6 +24,7 @@ fragment fragAllPostsDetails on Post{
     lName
     avatar
   }
+  createdAt
   likesCount
   commentsCount
   sharesCount

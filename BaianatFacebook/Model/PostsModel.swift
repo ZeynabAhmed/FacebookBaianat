@@ -29,4 +29,5 @@ struct PostsContent {
     var likesCount: Int
     var commentsCount: Int
     var sharesCount: Int
+    var createdAt: String
 }

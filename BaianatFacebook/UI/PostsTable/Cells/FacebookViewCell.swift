@@ -14,7 +14,10 @@ class FacebookViewCell: UITableViewCell {
     @IBOutlet weak var likesNumber: UIButton!
     @IBOutlet weak var commentNumber: UIButton!
     @IBOutlet weak var sharesNumber: UIButton!
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentOfView: UIView!
+  //  @IBOutlet weak var textPost: UITextView!
+    @IBOutlet weak var datePost: UILabel!
+    @IBOutlet weak var userName: UILabel!
     
     static let identifier = "FacebookViewCell"
     
@@ -24,20 +27,26 @@ class FacebookViewCell: UITableViewCell {
     
     func setPostData(pageContent: PostsContent){
         self.userImage.image = UIImage(named: pageContent.avatar)
-        self.likesNumber.text = "\(pageContent.likesCount)"
-        self.commentNumber.text = "\(pageContent.commentNumber)"
-        self.sharesNumber.text = "\(pageContent.sharesNumber)"
+        self.likesNumber.setTitle("\(pageContent.likesCount)", for: .normal)
+        self.commentNumber.setTitle("\(pageContent.commentsCount)", for: .normal)
+        self.sharesNumber.setTitle("\(pageContent.sharesCount)", for: .normal)
+        self.userName.text = "\(pageContent.fName) \(pageContent.lName)"
+        self.datePost.text = "\(pageContent.createdAt)"
+       // self.textPost.text = "\(pageContent.text)"
+        print(" avatar \(pageContent.avatar)")
+        print(" text \(pageContent.text)")
+        print(" avatar \(pageContent.createdAt)")
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.layer.cornerRadius = 8.0
-        self.contentView.clipsToBounds = true
-        likesNumber.layer.cornerRadius = 8.0
+        self.contentOfView.layer.cornerRadius = 10.0
+        self.contentOfView.clipsToBounds = true
+        likesNumber.layer.cornerRadius = 10.0
         likesNumber.clipsToBounds = true
-        commentNumber.layer.cornerRadius = 8.0
+        commentNumber.layer.cornerRadius = 10.0
         commentNumber.clipsToBounds = true
-        sharesNumber.layer.cornerRadius = 8.0
+        sharesNumber.layer.cornerRadius = 10.0
         sharesNumber.clipsToBounds = true
         
     }

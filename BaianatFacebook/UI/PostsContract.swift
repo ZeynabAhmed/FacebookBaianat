@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol PostsViewProtocol: class{
     func didLoadPosts(posts: [PostsContent], pageInfo: PageInfoModel)
@@ -20,5 +21,5 @@ protocol PostsPresenterProtocol: class{
 }
 
 protocol PostsBusinessHelperProtocol: class{
-    func loadPosts(pageNumber: Float) -> Observable<PostsModel>
+    func loadPosts(pageNumber: Double) -> Observable<PostsModel>
 }

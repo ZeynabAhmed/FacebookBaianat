@@ -12,7 +12,7 @@ import RxSwift
 
 class PostsPresenter: NSObject, PostsPresenterProtocol{
     weak var view: PostsViewProtocol?
-    let helper = PostsBusinessHelperProtocol()
+    let helper:PostsBusinessHelperProtocol = BusinessHelper()
     let disposeBag = DisposeBag()
     var pageCount = 1
     
@@ -25,9 +25,9 @@ class PostsPresenter: NSObject, PostsPresenterProtocol{
     }
     
     func getPosts(){
-        helper.loadPosts(pageNumber: pageCount).subscribe(onNext: { (result) in
+        helper.loadPosts(pageNumber: Double(pageCount)).subscribe(onNext: { (result) in
             self.pageCount += 1
-            self.view?.didLoadPosts(posts: result.postsContentArray, pageInfo: result.pageInfo)
+            self.view?.didLoadPosts(posts: result.postsContent, pageInfo: result.pageInfoModel)
         }, onError: { (error) in
             self.view?.displayError(message: error.localizedDescription)
         }).disposed(by: disposeBag)

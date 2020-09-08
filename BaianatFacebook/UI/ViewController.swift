@@ -23,7 +23,7 @@ class ViewController: UIViewController, PostsViewProtocol {
         FacebookTable.register(FacebookViewCell.nib(), forCellReuseIdentifier: FacebookViewCell.identifier)
         FacebookTable.tableFooterView = UIView()
         
-        presenter = PostsPresenterProtocol()
+        presenter = PostsPresenter()
         presenter?.attachView(viewProtocol: self)
         presenter?.getPosts()
         

@@ -53,7 +53,7 @@ public final class AllPostsQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query AllPosts($pageNumber: Int) {
+    query AllPosts($pageNumber: Float) {
       Posts(paginate: {page: $pageNumber}) {
         __typename
         data {
@@ -75,9 +75,9 @@ public final class AllPostsQuery: GraphQLQuery {
 
   public var queryDocument: String { return operationDefinition.appending("\n" + FragPageInfo.fragmentDefinition).appending("\n" + FragAllPostsDetails.fragmentDefinition) }
 
-  public var pageNumber: Int?
+  public var pageNumber: Double?
 
-  public init(pageNumber: Int? = nil) {
+  public init(pageNumber: Double? = nil) {
     self.pageNumber = pageNumber
   }
 
@@ -397,6 +397,7 @@ public struct FragAllPostsDetails: GraphQLFragment {
         lName
         avatar
       }
+      createdAt
       likesCount
       commentsCount
       sharesCount
@@ -410,6 +411,7 @@ public struct FragAllPostsDetails: GraphQLFragment {
       GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
       GraphQLField("content", type: .nonNull(.list(.nonNull(.object(Content.selections))))),
       GraphQLField("user", type: .nonNull(.object(User.selections))),
+      GraphQLField("createdAt", type: .nonNull(.scalar(String.self))),
       GraphQLField("likesCount", type: .nonNull(.scalar(Int.self))),
       GraphQLField("commentsCount", type: .nonNull(.scalar(Int.self))),
       GraphQLField("sharesCount", type: .nonNull(.scalar(Int.self))),
@@ -422,8 +424,8 @@ public struct FragAllPostsDetails: GraphQLFragment {
     self.resultMap = unsafeResultMap
   }
 
-  public init(content: [Content], user: User, likesCount: Int, commentsCount: Int, sharesCount: Int) {
-    self.init(unsafeResultMap: ["__typename": "Post", "content": content.map { (value: Content) -> ResultMap in value.resultMap }, "user": user.resultMap, "likesCount": likesCount, "commentsCount": commentsCount, "sharesCount": sharesCount])
+  public init(content: [Content], user: User, createdAt: String, likesCount: Int, commentsCount: Int, sharesCount: Int) {
+    self.init(unsafeResultMap: ["__typename": "Post", "content": content.map { (value: Content) -> ResultMap in value.resultMap }, "user": user.resultMap, "createdAt": createdAt, "likesCount": likesCount, "commentsCount": commentsCount, "sharesCount": sharesCount])
   }
 
   public var __typename: String {
@@ -450,6 +452,15 @@ public struct FragAllPostsDetails: GraphQLFragment {
     }
     set {
       resultMap.updateValue(newValue.resultMap, forKey: "user")
+    }
+  }
+
+  public var createdAt: String {
+    get {
+      return resultMap["createdAt"]! as! String
+    }
+    set {
+      resultMap.updateValue(newValue, forKey: "createdAt")
     }
   }
 
