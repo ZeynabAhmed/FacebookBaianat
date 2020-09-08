@@ -8,7 +8,7 @@ target 'BaianatFacebook' do
   # Pods for BaianatFacebook
 
 	pod 'Apollo'
-	pod 'RxSwift'
+	pod 'RxSwift', '~> 4.5'
 
   target 'BaianatFacebookTests' do
     inherit! :search_paths

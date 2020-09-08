@@ -23,7 +23,9 @@ struct PostsContent {
     var fName: String
     var lName: String
     var avatar: String
-    var content: [String]
+    var images: [String]
+    var video: [String]
+    var text: String
     var likesCount: Int
     var commentsCount: Int
     var sharesCount: Int

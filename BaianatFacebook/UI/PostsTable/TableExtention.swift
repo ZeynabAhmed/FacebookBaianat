@@ -16,12 +16,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FacebookTable.dequeueReusableCell(withIdentifier: FacebookViewCell.identifier, for: indexPath) as! FacebookViewCell
-        
+        cell.setPostData(pageContent: postsContent[indexPath.row])
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return 300.0 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == postsContent.count - 6{
+            if pageInfo.page < pageInfo.totalPages{
+                let oldPostContent = PostsContent
+                let oldPageNumber = pageInfo.page
+                presenter?.getPosts()
+                let newPostContent = PostsContent
+                pageInfo.page += oldPageNumber
+                PostsContent.removeAll()
+                PostsContent.append(contentsOf: oldPostContent)
+                PostsContent.append(contentsOf: newPostContent)
+                self.perform(#selector(refreshTableData), with: nil, afterDelay: 1.0)
+            }
+        }
+    }
+    
+    @objc
+    func refreshTableData(){
+        self.FacebookTable.reloadData()
     }
     
 }

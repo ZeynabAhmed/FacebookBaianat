@@ -14,11 +14,11 @@ protocol PostsViewProtocol: class{
 }
 
 protocol PostsPresenterProtocol: class{
-    func getPosts()
     func attachView(viewProtocol: PostsViewProtocol)
     func detachView()
+    func getPosts()
 }
 
-protocol PostsBusinessHelper: class{
-    func loadPosts(paginate: Int) -> Observable<FeaturedStoreModel>
+protocol PostsBusinessHelperProtocol: class{
+    func loadPosts(pageNumber: Float) -> Observable<PostsModel>
 }
