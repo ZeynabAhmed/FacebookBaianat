@@ -26,7 +26,7 @@ class ViewController: UIViewController, PostsViewProtocol {
         presenter = PostsPresenter()
         presenter?.attachView(viewProtocol: self)
         presenter?.getPosts()
-        
+        print("will")
         FacebookTable.reloadData()
         
     }
@@ -47,6 +47,7 @@ extension ViewController {
     func didLoadPosts(posts: [PostsContent], pageInfo: PageInfoModel){
         self.pageInfo = pageInfo
         self.postsContent = posts
+        print("reload didLoadPosts")
         FacebookTable.reloadData()
     }
     func displayError(message: String){

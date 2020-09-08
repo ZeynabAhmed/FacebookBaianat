@@ -9,6 +9,7 @@ target 'BaianatFacebook' do
 
 	pod 'Apollo'
 	pod 'RxSwift', '~> 4.5'
+  pod 'SDWebImage', '~> 5.0'
 
   target 'BaianatFacebookTests' do
     inherit! :search_paths

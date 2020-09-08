@@ -3,20 +3,26 @@ PODS:
     - Apollo/Core (= 0.32.0)
   - Apollo/Core (0.32.0)
   - RxSwift (4.5.0)
+  - SDWebImage (5.9.0):
+    - SDWebImage/Core (= 5.9.0)
+  - SDWebImage/Core (5.9.0)
 
 DEPENDENCIES:
   - Apollo
   - RxSwift (~> 4.5)
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - Apollo
     - RxSwift
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Apollo: 1389ecb47926faae2b95acb331a088fa88de13f6
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
 
-PODFILE CHECKSUM: 516dea1f0115481a8443384abb441f7da8babc0b
+PODFILE CHECKSUM: e9af8e046c93c000bac5956e064e9b3ae3ae8706
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

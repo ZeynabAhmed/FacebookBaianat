@@ -24,14 +24,15 @@ class BusinessHelper: NSObject,PostsBusinessHelperProtocol{
                 if let fetchedPosts = graphqlResult.data?.posts.data?.items?.compactMap({$0?.fragments.fragAllPostsDetails}){
                     for data in fetchedPosts{
                         postsContentArray.append(PostsContent(fName: data.user.fName, lName: data.user.lName ?? " lName ", avatar: data.user.avatar ?? " ", images: [""], video: [""], text: " ", likesCount: data.likesCount, commentsCount: data.commentsCount, sharesCount: data.sharesCount, createdAt: data.createdAt))
-                        print(" posts content \(data)")
+                        
+                       // print(" posts content \(data)")
                     }
                 }
                 if let fetchedPageInfo = graphqlResult.data?.posts.data?.pageInfo{
                     pageInfo.page = fetchedPageInfo.fragments.fragPageInfo.page
                     pageInfo.totalPages = fetchedPageInfo.fragments.fragPageInfo.totalPages
                     pageInfo.limit = fetchedPageInfo.fragments.fragPageInfo.limit 
-                    print(" posts content \(fetchedPageInfo)")
+                  //  print(" posts content \(fetchedPageInfo)")
                 }
                 subject.onNext(PostsModel(pageInfoModel: pageInfo, postsContent: postsContentArray))
             

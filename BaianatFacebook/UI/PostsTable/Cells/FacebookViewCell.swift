@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FacebookViewCell: UITableViewCell {
     
@@ -19,6 +20,7 @@ class FacebookViewCell: UITableViewCell {
     @IBOutlet weak var datePost: UILabel!
     @IBOutlet weak var userName: UILabel!
     
+    @IBOutlet weak var textPost: UILabel!
     static let identifier = "FacebookViewCell"
     
     static func nib() -> UINib{
@@ -26,20 +28,38 @@ class FacebookViewCell: UITableViewCell {
     }
     
     func setPostData(pageContent: PostsContent){
-        self.userImage.image = UIImage(named: pageContent.avatar)
+        self.userImage.sd_setImage(with: URL(string: pageContent.avatar), placeholderImage: UIImage(named: "user.png"))
         self.likesNumber.setTitle("\(pageContent.likesCount)", for: .normal)
         self.commentNumber.setTitle("\(pageContent.commentsCount)", for: .normal)
         self.sharesNumber.setTitle("\(pageContent.sharesCount)", for: .normal)
         self.userName.text = "\(pageContent.fName) \(pageContent.lName)"
-        self.datePost.text = "\(pageContent.createdAt)"
-       // self.textPost.text = "\(pageContent.text)"
-        print(" avatar \(pageContent.avatar)")
-        print(" text \(pageContent.text)")
-        print(" avatar \(pageContent.createdAt)")
+        self.textPost.text = " "
+        let myDouble = Double(pageContent.createdAt) ?? 0
+        
+        self.datePost.text = "\(getDateFromTimeStamp(timeStamp : myDouble))"
+//        print(" timeStamp \(getDateFromTimeStamp(timeStamp : myDouble))")
+//        print(" avatar \(pageContent.avatar)")
+//        print(" text \(pageContent.text)")
+//        print(" avatar \(pageContent.createdAt)")
     }
 
+    func getDateFromTimeStamp(timeStamp : Double) -> String {
+
+        let date = NSDate(timeIntervalSince1970: timeStamp)
+
+        let dayTimePeriodFormatter = DateFormatter()
+        dayTimePeriodFormatter.dateFormat = "dd MMM YY, hh:mm a"
+     // UnComment below to get only time
+    //  dayTimePeriodFormatter.dateFormat = "hh:mm a"
+
+        let dateString = dayTimePeriodFormatter.string(from: date as Date)
+        return dateString
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.userImage.layer.cornerRadius = 40.0
+        self.userImage.clipsToBounds = true
         self.contentOfView.layer.cornerRadius = 10.0
         self.contentOfView.clipsToBounds = true
         likesNumber.layer.cornerRadius = 10.0
@@ -57,4 +77,8 @@ class FacebookViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension Date {
+    var hour: Int { return Calendar.autoupdatingCurrent.component(.hour, from: self) }
 }

@@ -18,29 +18,40 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FacebookTable.dequeueReusableCell(withIdentifier: FacebookViewCell.identifier, for: indexPath) as! FacebookViewCell
         cell.setPostData(pageContent: postsContent[indexPath.row])
-        print("cell For Row")
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == postsContent.count - 6{
-            if pageInfo.page < pageInfo.totalPages{
+            if pageInfo.page <= pageInfo.totalPages{
                 let oldPostContent = postsContent
                 let oldPageNumber = pageInfo.page
                 presenter?.getPosts()
                 let newPostContent = postsContent.self
-                pageInfo.page += oldPageNumber
+                print("pageInfo.totalPages--**--\(pageInfo.totalPages)")
+                print("old page------\(oldPageNumber)")
+                print("new page------\(pageInfo.page)")
+                pageInfo.page += 1
+                print("all page------\(pageInfo.page)")
+                print("oldPostContent *** \(oldPostContent.count)")
+                print("newPostContent *** \(newPostContent.count)")
                 postsContent.removeAll()
                 postsContent.append(contentsOf: oldPostContent)
                 postsContent.append(contentsOf: newPostContent)
-                self.perform(#selector(refreshTableData), with: nil, afterDelay: 1.0)
+                print("allPostContent *** \(oldPostContent.count)")
+                self.perform(#selector(refreshTableData), with: nil, afterDelay: 3.0)
             }
         }
     }
     
     @objc
     func refreshTableData(){
+        print("reload objec")
         self.FacebookTable.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 380.0
     }
     
 }
