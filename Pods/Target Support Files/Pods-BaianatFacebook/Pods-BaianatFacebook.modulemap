@@ -1,0 +1,6 @@
+framework module Pods_BaianatFacebook {
+  umbrella header "Pods-BaianatFacebook-umbrella.h"
+
+  export *
+  module * { export * }
+}

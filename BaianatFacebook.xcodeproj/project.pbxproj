@@ -1,0 +1,862 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E744C44896CB538E87E69CE /* Pods_BaianatFacebook_BaianatFacebookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4675DEDD4A87D91CC313B0 /* Pods_BaianatFacebook_BaianatFacebookUITests.framework */; };
+		526B839C2506713800A0D6F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B839B2506713800A0D6F6 /* AppDelegate.swift */; };
+		526B839E2506713800A0D6F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B839D2506713800A0D6F6 /* SceneDelegate.swift */; };
+		526B83A02506713800A0D6F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B839F2506713800A0D6F6 /* ViewController.swift */; };
+		526B83A32506713800A0D6F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526B83A12506713800A0D6F6 /* Main.storyboard */; };
+		526B83A52506713900A0D6F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526B83A42506713900A0D6F6 /* Assets.xcassets */; };
+		526B83A82506713900A0D6F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526B83A62506713900A0D6F6 /* LaunchScreen.storyboard */; };
+		526B83B32506713900A0D6F6 /* BaianatFacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B83B22506713900A0D6F6 /* BaianatFacebookTests.swift */; };
+		526B83BE2506713900A0D6F6 /* BaianatFacebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B83BD2506713900A0D6F6 /* BaianatFacebookUITests.swift */; };
+		526B83CD2506755B00A0D6F6 /* FacebookViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B83CB2506755B00A0D6F6 /* FacebookViewCell.swift */; };
+		526B83CE2506755B00A0D6F6 /* FacebookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526B83CC2506755B00A0D6F6 /* FacebookViewCell.xib */; };
+		526B83D0250675E500A0D6F6 /* TableExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B83CF250675E500A0D6F6 /* TableExtention.swift */; };
+		526B83D825068D2800A0D6F6 /* Posts.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 526B83D725068D2800A0D6F6 /* Posts.graphql */; };
+		526B83DB250690DB00A0D6F6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 526B83DA250690DB00A0D6F6 /* schema.json */; };
+		526B83DD2506926500A0D6F6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B83DC2506926500A0D6F6 /* API.swift */; };
+		BF233E6625073C5700214D27 /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6525073C5700214D27 /* ApolloNetwork.swift */; };
+		BF233E6925073D6100214D27 /* BusinessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6825073D6100214D27 /* BusinessHelper.swift */; };
+		BF233E6B25073DB800214D27 /* PostsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6A25073DB800214D27 /* PostsContract.swift */; };
+		BF233E6D25073DE000214D27 /* PostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6C25073DE000214D27 /* PostsPresenter.swift */; };
+		BF233E6F25073E4600214D27 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6E25073E4600214D27 /* PostsModel.swift */; };
+		BF4127951F2D8A6EB2A9D1B8 /* Pods_BaianatFacebookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0B9343EFFCCC5DF0946075 /* Pods_BaianatFacebookTests.framework */; };
+		C3E643F39FED6F9E59F0BB4F /* Pods_BaianatFacebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDE5A0CAD64994AC3A72FFBC /* Pods_BaianatFacebook.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		526B83AF2506713900A0D6F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 526B83902506713800A0D6F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 526B83972506713800A0D6F6;
+			remoteInfo = BaianatFacebook;
+		};
+		526B83BA2506713900A0D6F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 526B83902506713800A0D6F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 526B83972506713800A0D6F6;
+			remoteInfo = BaianatFacebook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		069A966A9DA55AD6BA4757A8 /* Pods-BaianatFacebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebook.debug.xcconfig"; path = "Target Support Files/Pods-BaianatFacebook/Pods-BaianatFacebook.debug.xcconfig"; sourceTree = "<group>"; };
+		3B4675DEDD4A87D91CC313B0 /* Pods_BaianatFacebook_BaianatFacebookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaianatFacebook_BaianatFacebookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		526B83982506713800A0D6F6 /* BaianatFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaianatFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		526B839B2506713800A0D6F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		526B839D2506713800A0D6F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		526B839F2506713800A0D6F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		526B83A22506713800A0D6F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		526B83A42506713900A0D6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		526B83A72506713900A0D6F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		526B83A92506713900A0D6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		526B83AE2506713900A0D6F6 /* BaianatFacebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaianatFacebookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		526B83B22506713900A0D6F6 /* BaianatFacebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaianatFacebookTests.swift; sourceTree = "<group>"; };
+		526B83B42506713900A0D6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		526B83B92506713900A0D6F6 /* BaianatFacebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaianatFacebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		526B83BD2506713900A0D6F6 /* BaianatFacebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaianatFacebookUITests.swift; sourceTree = "<group>"; };
+		526B83BF2506713900A0D6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		526B83CB2506755B00A0D6F6 /* FacebookViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewCell.swift; sourceTree = "<group>"; };
+		526B83CC2506755B00A0D6F6 /* FacebookViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookViewCell.xib; sourceTree = "<group>"; };
+		526B83CF250675E500A0D6F6 /* TableExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableExtention.swift; sourceTree = "<group>"; };
+		526B83D725068D2800A0D6F6 /* Posts.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Posts.graphql; sourceTree = "<group>"; };
+		526B83DA250690DB00A0D6F6 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		526B83DC2506926500A0D6F6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		64AC997EE84CE9FF442047DA /* Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig"; path = "Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B287F10F1ECC39034C5065F4 /* Pods-BaianatFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebook.release.xcconfig"; path = "Target Support Files/Pods-BaianatFacebook/Pods-BaianatFacebook.release.xcconfig"; sourceTree = "<group>"; };
+		B74F0C184101D7A666B02D29 /* Pods-BaianatFacebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebookTests.debug.xcconfig"; path = "Target Support Files/Pods-BaianatFacebookTests/Pods-BaianatFacebookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF233E6525073C5700214D27 /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
+		BF233E6825073D6100214D27 /* BusinessHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHelper.swift; sourceTree = "<group>"; };
+		BF233E6A25073DB800214D27 /* PostsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsContract.swift; sourceTree = "<group>"; };
+		BF233E6C25073DE000214D27 /* PostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPresenter.swift; sourceTree = "<group>"; };
+		BF233E6E25073E4600214D27 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		D0FAD52B8711BAF31030262E /* Pods-BaianatFacebook-BaianatFacebookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebook-BaianatFacebookUITests.release.xcconfig"; path = "Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D70D1FBCDBD32D933AF695B6 /* Pods-BaianatFacebookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebookTests.release.xcconfig"; path = "Target Support Files/Pods-BaianatFacebookTests/Pods-BaianatFacebookTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC0B9343EFFCCC5DF0946075 /* Pods_BaianatFacebookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaianatFacebookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDE5A0CAD64994AC3A72FFBC /* Pods_BaianatFacebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaianatFacebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		526B83952506713800A0D6F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3E643F39FED6F9E59F0BB4F /* Pods_BaianatFacebook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526B83AB2506713900A0D6F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF4127951F2D8A6EB2A9D1B8 /* Pods_BaianatFacebookTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526B83B62506713900A0D6F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E744C44896CB538E87E69CE /* Pods_BaianatFacebook_BaianatFacebookUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F54C86B2EFBD4120AE3E3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDE5A0CAD64994AC3A72FFBC /* Pods_BaianatFacebook.framework */,
+				3B4675DEDD4A87D91CC313B0 /* Pods_BaianatFacebook_BaianatFacebookUITests.framework */,
+				DC0B9343EFFCCC5DF0946075 /* Pods_BaianatFacebookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13BE667D3646D98B36C94006 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				069A966A9DA55AD6BA4757A8 /* Pods-BaianatFacebook.debug.xcconfig */,
+				B287F10F1ECC39034C5065F4 /* Pods-BaianatFacebook.release.xcconfig */,
+				64AC997EE84CE9FF442047DA /* Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig */,
+				D0FAD52B8711BAF31030262E /* Pods-BaianatFacebook-BaianatFacebookUITests.release.xcconfig */,
+				B74F0C184101D7A666B02D29 /* Pods-BaianatFacebookTests.debug.xcconfig */,
+				D70D1FBCDBD32D933AF695B6 /* Pods-BaianatFacebookTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		526B838F2506713800A0D6F6 = {
+			isa = PBXGroup;
+			children = (
+				526B839A2506713800A0D6F6 /* BaianatFacebook */,
+				526B83B12506713900A0D6F6 /* BaianatFacebookTests */,
+				526B83BC2506713900A0D6F6 /* BaianatFacebookUITests */,
+				526B83992506713800A0D6F6 /* Products */,
+				13BE667D3646D98B36C94006 /* Pods */,
+				10F54C86B2EFBD4120AE3E3F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		526B83992506713800A0D6F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				526B83982506713800A0D6F6 /* BaianatFacebook.app */,
+				526B83AE2506713900A0D6F6 /* BaianatFacebookTests.xctest */,
+				526B83B92506713900A0D6F6 /* BaianatFacebookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		526B839A2506713800A0D6F6 /* BaianatFacebook */ = {
+			isa = PBXGroup;
+			children = (
+				526B839D2506713800A0D6F6 /* SceneDelegate.swift */,
+				526B839B2506713800A0D6F6 /* AppDelegate.swift */,
+				BF233E6525073C5700214D27 /* ApolloNetwork.swift */,
+				526B83D625068CE100A0D6F6 /* Graphql */,
+				526B83D4250681C000A0D6F6 /* Model */,
+				526B83D5250681CE00A0D6F6 /* Data */,
+				526B83D12506775A00A0D6F6 /* UI */,
+				526B83A62506713900A0D6F6 /* LaunchScreen.storyboard */,
+				526B83A42506713900A0D6F6 /* Assets.xcassets */,
+				526B83A92506713900A0D6F6 /* Info.plist */,
+			);
+			path = BaianatFacebook;
+			sourceTree = "<group>";
+		};
+		526B83B12506713900A0D6F6 /* BaianatFacebookTests */ = {
+			isa = PBXGroup;
+			children = (
+				526B83B22506713900A0D6F6 /* BaianatFacebookTests.swift */,
+				526B83B42506713900A0D6F6 /* Info.plist */,
+			);
+			path = BaianatFacebookTests;
+			sourceTree = "<group>";
+		};
+		526B83BC2506713900A0D6F6 /* BaianatFacebookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				526B83BD2506713900A0D6F6 /* BaianatFacebookUITests.swift */,
+				526B83BF2506713900A0D6F6 /* Info.plist */,
+			);
+			path = BaianatFacebookUITests;
+			sourceTree = "<group>";
+		};
+		526B83D12506775A00A0D6F6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				526B839F2506713800A0D6F6 /* ViewController.swift */,
+				BF233E6C25073DE000214D27 /* PostsPresenter.swift */,
+				BF233E6A25073DB800214D27 /* PostsContract.swift */,
+				526B83A12506713800A0D6F6 /* Main.storyboard */,
+				526B83D22506777500A0D6F6 /* PostsTable */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		526B83D22506777500A0D6F6 /* PostsTable */ = {
+			isa = PBXGroup;
+			children = (
+				526B83CF250675E500A0D6F6 /* TableExtention.swift */,
+				526B83D3250677A600A0D6F6 /* Cells */,
+			);
+			path = PostsTable;
+			sourceTree = "<group>";
+		};
+		526B83D3250677A600A0D6F6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				526B83CB2506755B00A0D6F6 /* FacebookViewCell.swift */,
+				526B83CC2506755B00A0D6F6 /* FacebookViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		526B83D4250681C000A0D6F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF233E6E25073E4600214D27 /* PostsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		526B83D5250681CE00A0D6F6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BF233E6725073D4800214D27 /* API */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		526B83D625068CE100A0D6F6 /* Graphql */ = {
+			isa = PBXGroup;
+			children = (
+				526B83DC2506926500A0D6F6 /* API.swift */,
+				526B83DA250690DB00A0D6F6 /* schema.json */,
+				526B83D725068D2800A0D6F6 /* Posts.graphql */,
+			);
+			path = Graphql;
+			sourceTree = "<group>";
+		};
+		BF233E6725073D4800214D27 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BF233E6825073D6100214D27 /* BusinessHelper.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		526B83972506713800A0D6F6 /* BaianatFacebook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526B83C22506713900A0D6F6 /* Build configuration list for PBXNativeTarget "BaianatFacebook" */;
+			buildPhases = (
+				E06A11321A02E5174A33AB06 /* [CP] Check Pods Manifest.lock */,
+				526B83942506713800A0D6F6 /* Sources */,
+				526B83D925068D4100A0D6F6 /* Apollo Run Script */,
+				526B83952506713800A0D6F6 /* Frameworks */,
+				526B83962506713800A0D6F6 /* Resources */,
+				428DFC64036C9FCF465F5D45 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaianatFacebook;
+			productName = BaianatFacebook;
+			productReference = 526B83982506713800A0D6F6 /* BaianatFacebook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		526B83AD2506713900A0D6F6 /* BaianatFacebookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526B83C52506713900A0D6F6 /* Build configuration list for PBXNativeTarget "BaianatFacebookTests" */;
+			buildPhases = (
+				60CD2A72B3C90AEA24323ADE /* [CP] Check Pods Manifest.lock */,
+				526B83AA2506713900A0D6F6 /* Sources */,
+				526B83AB2506713900A0D6F6 /* Frameworks */,
+				526B83AC2506713900A0D6F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				526B83B02506713900A0D6F6 /* PBXTargetDependency */,
+			);
+			name = BaianatFacebookTests;
+			productName = BaianatFacebookTests;
+			productReference = 526B83AE2506713900A0D6F6 /* BaianatFacebookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		526B83B82506713900A0D6F6 /* BaianatFacebookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526B83C82506713900A0D6F6 /* Build configuration list for PBXNativeTarget "BaianatFacebookUITests" */;
+			buildPhases = (
+				E05D914F412E3AED95E2347C /* [CP] Check Pods Manifest.lock */,
+				526B83B52506713900A0D6F6 /* Sources */,
+				526B83B62506713900A0D6F6 /* Frameworks */,
+				526B83B72506713900A0D6F6 /* Resources */,
+				7285D1FB7A7614462820565A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				526B83BB2506713900A0D6F6 /* PBXTargetDependency */,
+			);
+			name = BaianatFacebookUITests;
+			productName = BaianatFacebookUITests;
+			productReference = 526B83B92506713900A0D6F6 /* BaianatFacebookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		526B83902506713800A0D6F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "Karim Elhedaby";
+				TargetAttributes = {
+					526B83972506713800A0D6F6 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					526B83AD2506713900A0D6F6 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 526B83972506713800A0D6F6;
+					};
+					526B83B82506713900A0D6F6 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 526B83972506713800A0D6F6;
+					};
+				};
+			};
+			buildConfigurationList = 526B83932506713800A0D6F6 /* Build configuration list for PBXProject "BaianatFacebook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 526B838F2506713800A0D6F6;
+			productRefGroup = 526B83992506713800A0D6F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				526B83972506713800A0D6F6 /* BaianatFacebook */,
+				526B83AD2506713900A0D6F6 /* BaianatFacebookTests */,
+				526B83B82506713900A0D6F6 /* BaianatFacebookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		526B83962506713800A0D6F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526B83A82506713900A0D6F6 /* LaunchScreen.storyboard in Resources */,
+				526B83A52506713900A0D6F6 /* Assets.xcassets in Resources */,
+				526B83D825068D2800A0D6F6 /* Posts.graphql in Resources */,
+				526B83CE2506755B00A0D6F6 /* FacebookViewCell.xib in Resources */,
+				526B83DB250690DB00A0D6F6 /* schema.json in Resources */,
+				526B83A32506713800A0D6F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526B83AC2506713900A0D6F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526B83B72506713900A0D6F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		428DFC64036C9FCF465F5D45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook/Pods-BaianatFacebook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook/Pods-BaianatFacebook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook/Pods-BaianatFacebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		526B83D925068D4100A0D6F6 /* Apollo Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"Graphql/schema.json\" Graphql/API.swift\n\n";
+		};
+		60CD2A72B3C90AEA24323ADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaianatFacebookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7285D1FB7A7614462820565A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05D914F412E3AED95E2347C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaianatFacebook-BaianatFacebookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06A11321A02E5174A33AB06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaianatFacebook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		526B83942506713800A0D6F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526B83A02506713800A0D6F6 /* ViewController.swift in Sources */,
+				526B83D0250675E500A0D6F6 /* TableExtention.swift in Sources */,
+				526B839C2506713800A0D6F6 /* AppDelegate.swift in Sources */,
+				BF233E6925073D6100214D27 /* BusinessHelper.swift in Sources */,
+				526B83CD2506755B00A0D6F6 /* FacebookViewCell.swift in Sources */,
+				BF233E6F25073E4600214D27 /* PostsModel.swift in Sources */,
+				BF233E6625073C5700214D27 /* ApolloNetwork.swift in Sources */,
+				BF233E6B25073DB800214D27 /* PostsContract.swift in Sources */,
+				526B83DD2506926500A0D6F6 /* API.swift in Sources */,
+				BF233E6D25073DE000214D27 /* PostsPresenter.swift in Sources */,
+				526B839E2506713800A0D6F6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526B83AA2506713900A0D6F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526B83B32506713900A0D6F6 /* BaianatFacebookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		526B83B52506713900A0D6F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526B83BE2506713900A0D6F6 /* BaianatFacebookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		526B83B02506713900A0D6F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 526B83972506713800A0D6F6 /* BaianatFacebook */;
+			targetProxy = 526B83AF2506713900A0D6F6 /* PBXContainerItemProxy */;
+		};
+		526B83BB2506713900A0D6F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 526B83972506713800A0D6F6 /* BaianatFacebook */;
+			targetProxy = 526B83BA2506713900A0D6F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		526B83A12506713800A0D6F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				526B83A22506713800A0D6F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		526B83A62506713900A0D6F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				526B83A72506713900A0D6F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		526B83C02506713900A0D6F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		526B83C12506713900A0D6F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		526B83C32506713900A0D6F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 069A966A9DA55AD6BA4757A8 /* Pods-BaianatFacebook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaianatFacebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZeynabAhmed.BaianatFacebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		526B83C42506713900A0D6F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B287F10F1ECC39034C5065F4 /* Pods-BaianatFacebook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaianatFacebook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZeynabAhmed.BaianatFacebook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		526B83C62506713900A0D6F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B74F0C184101D7A666B02D29 /* Pods-BaianatFacebookTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaianatFacebookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZeynabAhmed.BaianatFacebookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaianatFacebook.app/BaianatFacebook";
+			};
+			name = Debug;
+		};
+		526B83C72506713900A0D6F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D70D1FBCDBD32D933AF695B6 /* Pods-BaianatFacebookTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaianatFacebookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZeynabAhmed.BaianatFacebookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaianatFacebook.app/BaianatFacebook";
+			};
+			name = Release;
+		};
+		526B83C92506713900A0D6F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64AC997EE84CE9FF442047DA /* Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaianatFacebookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZeynabAhmed.BaianatFacebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaianatFacebook;
+			};
+			name = Debug;
+		};
+		526B83CA2506713900A0D6F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0FAD52B8711BAF31030262E /* Pods-BaianatFacebook-BaianatFacebookUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BaianatFacebookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ZeynabAhmed.BaianatFacebookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BaianatFacebook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		526B83932506713800A0D6F6 /* Build configuration list for PBXProject "BaianatFacebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526B83C02506713900A0D6F6 /* Debug */,
+				526B83C12506713900A0D6F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		526B83C22506713900A0D6F6 /* Build configuration list for PBXNativeTarget "BaianatFacebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526B83C32506713900A0D6F6 /* Debug */,
+				526B83C42506713900A0D6F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		526B83C52506713900A0D6F6 /* Build configuration list for PBXNativeTarget "BaianatFacebookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526B83C62506713900A0D6F6 /* Debug */,
+				526B83C72506713900A0D6F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		526B83C82506713900A0D6F6 /* Build configuration list for PBXNativeTarget "BaianatFacebookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526B83C92506713900A0D6F6 /* Debug */,
+				526B83CA2506713900A0D6F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 526B83902506713800A0D6F6 /* Project object */;
+}

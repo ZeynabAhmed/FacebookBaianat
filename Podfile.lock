@@ -1,0 +1,22 @@
+PODS:
+  - Apollo (0.32.0):
+    - Apollo/Core (= 0.32.0)
+  - Apollo/Core (0.32.0)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - Apollo
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Apollo
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Apollo: 1389ecb47926faae2b95acb331a088fa88de13f6
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: 98f10b80f89dc9f8f86dfb22aafe707c7e9ed17d
+
+COCOAPODS: 1.9.3

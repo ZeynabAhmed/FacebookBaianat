@@ -1,0 +1,30 @@
+query AllPosts($pageNumber: Float){
+Posts(paginate:{page:$pageNumber}){
+     data{
+      pageInfo{
+        ...fragPageInfo
+      }
+      items{
+        ...fragAllPostsDetails
+      }
+    }
+  }
+}
+fragment fragPageInfo on PageInfo{
+  page
+  totalPages
+  limit
+}
+fragment fragAllPostsDetails on Post{
+  content{
+    contentType
+  }
+  user{
+    fName
+    lName
+    avatar
+  }
+  likesCount
+  commentsCount
+  sharesCount
+}

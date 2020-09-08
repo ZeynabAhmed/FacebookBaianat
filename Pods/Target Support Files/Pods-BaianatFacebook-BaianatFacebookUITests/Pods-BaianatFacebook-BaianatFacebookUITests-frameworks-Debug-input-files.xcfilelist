@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
