@@ -13,6 +13,7 @@ class FacebookViewCell: UITableViewCell {
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var likesNumber: UIButton!
+    @IBOutlet weak var imageHight: NSLayoutConstraint!
     @IBOutlet weak var commentNumber: UIButton!
     @IBOutlet weak var sharesNumber: UIButton!
     @IBOutlet weak var contentOfView: UIView!
@@ -34,23 +35,24 @@ class FacebookViewCell: UITableViewCell {
         self.likesNumber.setTitle("\(pageContent.likesCount)", for: .normal)
         self.commentNumber.setTitle("\(pageContent.commentsCount)", for: .normal)
         self.sharesNumber.setTitle("\(pageContent.sharesCount)", for: .normal)
+        self.userName.text = "\(pageContent.fName) \(pageContent.lName)"
+               
+        let date = Double(pageContent.createdAt) ?? 0
+               
+        self.datePost.text = "\(getDateFromTimeStamp(timeStamp : date))"
         if (verifyUrl (urlString: pageContent.text)){
             imageView?.isHidden = false
             
-            let transformer = SDImageResizingTransformer(size: CGSize(width: 280, height: 120), scaleMode: .fill)
+//            let transformer = SDImageResizingTransformer(size: CGSize(width: 250, height: 120), scaleMode: .fill)
             
-            imageView?.sd_setImage(with: URL(string: pageContent.text), placeholderImage: UIImage(named: "user.png"), context: [.imageTransformer: transformer])
+            imageHight.constant = 120
+            
+            imageContent?.sd_setImage(with: URL(string: pageContent.text), placeholderImage: nil)
         }else{
-            
-            imageView?.heightAnchor.constraint(equalToConstant: CGFloat(0)).isActive = true
+            imageHight.constant = 0
+//            imageView?.heightAnchor.constraint(equalToConstant: CGFloat(0)).isActive = true
             self.textPost.text = "\(pageContent.text) "
         }
-        
-        self.userName.text = "\(pageContent.fName) \(pageContent.lName)"
-        
-        let myDouble = Double(pageContent.createdAt) ?? 0
-        
-        self.datePost.text = "\(getDateFromTimeStamp(timeStamp : myDouble))"
 
     }
 
@@ -94,6 +96,24 @@ class FacebookViewCell: UITableViewCell {
     
 }
 
+extension UIImage{
+
+func resizeImageWith(newSize: CGSize) -> UIImage {
+
+    let horizontalRatio = newSize.width / size.width
+    let verticalRatio = newSize.height / size.height
+
+    let ratio = max(horizontalRatio, verticalRatio)
+    let newSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+    UIGraphicsBeginImageContextWithOptions(newSize, true, 0)
+    draw(in: CGRect(origin: CGPoint(x: 0, y: 0), size: newSize))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return newImage!
+   }
+}
+
 extension Date {
     var hour: Int { return Calendar.autoupdatingCurrent.component(.hour, from: self) }
 }
+
