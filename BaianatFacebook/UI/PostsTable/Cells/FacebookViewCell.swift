@@ -20,6 +20,8 @@ class FacebookViewCell: UITableViewCell {
     @IBOutlet weak var datePost: UILabel!
     @IBOutlet weak var userName: UILabel!
     
+    @IBOutlet weak var imageContent: UIImageView!
+    
     @IBOutlet weak var textPost: UILabel!
     static let identifier = "FacebookViewCell"
     
@@ -32,26 +34,40 @@ class FacebookViewCell: UITableViewCell {
         self.likesNumber.setTitle("\(pageContent.likesCount)", for: .normal)
         self.commentNumber.setTitle("\(pageContent.commentsCount)", for: .normal)
         self.sharesNumber.setTitle("\(pageContent.sharesCount)", for: .normal)
+        if (verifyUrl (urlString: pageContent.text)){
+            imageView?.isHidden = false
+            
+            let transformer = SDImageResizingTransformer(size: CGSize(width: 280, height: 120), scaleMode: .fill)
+            
+            imageView?.sd_setImage(with: URL(string: pageContent.text), placeholderImage: UIImage(named: "user.png"), context: [.imageTransformer: transformer])
+        }else{
+            
+            imageView?.heightAnchor.constraint(equalToConstant: CGFloat(0)).isActive = true
+            self.textPost.text = "\(pageContent.text) "
+        }
+        
         self.userName.text = "\(pageContent.fName) \(pageContent.lName)"
-        self.textPost.text = " "
+        
         let myDouble = Double(pageContent.createdAt) ?? 0
         
         self.datePost.text = "\(getDateFromTimeStamp(timeStamp : myDouble))"
-//        print(" timeStamp \(getDateFromTimeStamp(timeStamp : myDouble))")
-//        print(" avatar \(pageContent.avatar)")
-//        print(" text \(pageContent.text)")
-//        print(" avatar \(pageContent.createdAt)")
+
     }
 
+    func verifyUrl (urlString: String?) -> Bool {
+        if let urlString = urlString {
+            if let url = NSURL(string: urlString) {
+                return UIApplication.shared.canOpenURL(url as URL)
+            }
+        }
+        return false
+    }
+    
     func getDateFromTimeStamp(timeStamp : Double) -> String {
 
         let date = NSDate(timeIntervalSince1970: timeStamp)
-
         let dayTimePeriodFormatter = DateFormatter()
         dayTimePeriodFormatter.dateFormat = "dd MMM YY, hh:mm a"
-     // UnComment below to get only time
-    //  dayTimePeriodFormatter.dateFormat = "hh:mm a"
-
         let dateString = dayTimePeriodFormatter.string(from: date as Date)
         return dateString
     }
@@ -68,13 +84,12 @@ class FacebookViewCell: UITableViewCell {
         commentNumber.clipsToBounds = true
         sharesNumber.layer.cornerRadius = 10.0
         sharesNumber.clipsToBounds = true
+        self.imageView?.isHidden = true
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

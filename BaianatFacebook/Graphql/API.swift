@@ -64,6 +64,7 @@ public final class AllPostsQuery: GraphQLQuery {
           }
           items {
             __typename
+            ...fragContentPost
             ...fragAllPostsDetails
           }
         }
@@ -73,7 +74,7 @@ public final class AllPostsQuery: GraphQLQuery {
 
   public let operationName: String = "AllPosts"
 
-  public var queryDocument: String { return operationDefinition.appending("\n" + FragPageInfo.fragmentDefinition).appending("\n" + FragAllPostsDetails.fragmentDefinition) }
+  public var queryDocument: String { return operationDefinition.appending("\n" + FragPageInfo.fragmentDefinition).appending("\n" + FragContentPost.fragmentDefinition).appending("\n" + FragAllPostsDetails.fragmentDefinition) }
 
   public var pageNumber: Double?
 
@@ -261,6 +262,7 @@ public final class AllPostsQuery: GraphQLQuery {
           public static var selections: [GraphQLSelection] {
             return [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLFragmentSpread(FragContentPost.self),
               GraphQLFragmentSpread(FragAllPostsDetails.self),
             ]
           }
@@ -294,6 +296,15 @@ public final class AllPostsQuery: GraphQLQuery {
 
             public init(unsafeResultMap: ResultMap) {
               self.resultMap = unsafeResultMap
+            }
+
+            public var fragContentPost: FragContentPost {
+              get {
+                return FragContentPost(unsafeResultMap: resultMap)
+              }
+              set {
+                resultMap += newValue.resultMap
+              }
             }
 
             public var fragAllPostsDetails: FragAllPostsDetails {
@@ -389,6 +400,7 @@ public struct FragAllPostsDetails: GraphQLFragment {
       __typename
       content {
         __typename
+        value
         contentType
       }
       user {
@@ -497,6 +509,7 @@ public struct FragAllPostsDetails: GraphQLFragment {
     public static var selections: [GraphQLSelection] {
       return [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("value", type: .scalar(String.self)),
         GraphQLField("contentType", type: .nonNull(.scalar(ContentTypeEnum.self))),
       ]
     }
@@ -507,8 +520,8 @@ public struct FragAllPostsDetails: GraphQLFragment {
       self.resultMap = unsafeResultMap
     }
 
-    public init(contentType: ContentTypeEnum) {
-      self.init(unsafeResultMap: ["__typename": "Content", "contentType": contentType])
+    public init(value: String? = nil, contentType: ContentTypeEnum) {
+      self.init(unsafeResultMap: ["__typename": "Content", "value": value, "contentType": contentType])
     }
 
     public var __typename: String {
@@ -517,6 +530,15 @@ public struct FragAllPostsDetails: GraphQLFragment {
       }
       set {
         resultMap.updateValue(newValue, forKey: "__typename")
+      }
+    }
+
+    public var value: String? {
+      get {
+        return resultMap["value"] as? String
+      }
+      set {
+        resultMap.updateValue(newValue, forKey: "value")
       }
     }
 
@@ -585,6 +607,96 @@ public struct FragAllPostsDetails: GraphQLFragment {
       }
       set {
         resultMap.updateValue(newValue, forKey: "avatar")
+      }
+    }
+  }
+}
+
+public struct FragContentPost: GraphQLFragment {
+  /// The raw GraphQL definition of this fragment.
+  public static let fragmentDefinition: String =
+    """
+    fragment fragContentPost on Post {
+      __typename
+      content {
+        __typename
+        value
+      }
+    }
+    """
+
+  public static let possibleTypes: [String] = ["Post"]
+
+  public static var selections: [GraphQLSelection] {
+    return [
+      GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+      GraphQLField("content", type: .nonNull(.list(.nonNull(.object(Content.selections))))),
+    ]
+  }
+
+  public private(set) var resultMap: ResultMap
+
+  public init(unsafeResultMap: ResultMap) {
+    self.resultMap = unsafeResultMap
+  }
+
+  public init(content: [Content]) {
+    self.init(unsafeResultMap: ["__typename": "Post", "content": content.map { (value: Content) -> ResultMap in value.resultMap }])
+  }
+
+  public var __typename: String {
+    get {
+      return resultMap["__typename"]! as! String
+    }
+    set {
+      resultMap.updateValue(newValue, forKey: "__typename")
+    }
+  }
+
+  public var content: [Content] {
+    get {
+      return (resultMap["content"] as! [ResultMap]).map { (value: ResultMap) -> Content in Content(unsafeResultMap: value) }
+    }
+    set {
+      resultMap.updateValue(newValue.map { (value: Content) -> ResultMap in value.resultMap }, forKey: "content")
+    }
+  }
+
+  public struct Content: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Content"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("value", type: .scalar(String.self)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(value: String? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Content", "value": value])
+    }
+
+    public var __typename: String {
+      get {
+        return resultMap["__typename"]! as! String
+      }
+      set {
+        resultMap.updateValue(newValue, forKey: "__typename")
+      }
+    }
+
+    public var value: String? {
+      get {
+        return resultMap["value"] as? String
+      }
+      set {
+        resultMap.updateValue(newValue, forKey: "value")
       }
     }
   }

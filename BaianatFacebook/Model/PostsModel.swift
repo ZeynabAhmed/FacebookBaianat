@@ -12,7 +12,9 @@ struct PostsModel {
     var pageInfoModel: PageInfoModel
     var postsContent: [PostsContent]
 }
-
+struct ContentModel {
+    var value:String
+}
 struct PageInfoModel {
     var page: Int
     var totalPages: Int

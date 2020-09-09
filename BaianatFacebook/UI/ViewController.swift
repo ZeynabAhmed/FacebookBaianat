@@ -26,7 +26,6 @@ class ViewController: UIViewController, PostsViewProtocol {
         presenter = PostsPresenter()
         presenter?.attachView(viewProtocol: self)
         presenter?.getPosts()
-        print("will")
         FacebookTable.reloadData()
         
     }

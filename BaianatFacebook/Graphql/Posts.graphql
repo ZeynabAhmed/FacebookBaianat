@@ -5,6 +5,7 @@ Posts(paginate:{page:$pageNumber}){
         ...fragPageInfo
       }
       items{
+        ...fragContentPost
         ...fragAllPostsDetails
       }
     }
@@ -17,6 +18,7 @@ fragment fragPageInfo on PageInfo{
 }
 fragment fragAllPostsDetails on Post{
   content{
+    value
     contentType
   }
   user{
@@ -28,4 +30,10 @@ fragment fragAllPostsDetails on Post{
   likesCount
   commentsCount
   sharesCount
+}
+
+fragment fragContentPost on Post{
+  content{
+    value
+  }
 }

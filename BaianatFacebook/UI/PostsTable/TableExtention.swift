@@ -11,7 +11,7 @@ import UIKit
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("number Of Rows \(postsContent.count)")
+        //print("number Of Rows \(postsContent.count)")
         return postsContent.count
     }
     
@@ -27,7 +27,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 let oldPostContent = postsContent
                 let oldPageNumber = pageInfo.page
                 presenter?.getPosts()
-                let newPostContent = postsContent.self
+                let newPostContent = postsContent
                 print("pageInfo.totalPages--**--\(pageInfo.totalPages)")
                 print("old page------\(oldPageNumber)")
                 print("new page------\(pageInfo.page)")
@@ -38,20 +38,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 postsContent.removeAll()
                 postsContent.append(contentsOf: oldPostContent)
                 postsContent.append(contentsOf: newPostContent)
-                print("allPostContent *** \(oldPostContent.count)")
-                self.perform(#selector(refreshTableData), with: nil, afterDelay: 3.0)
+                print("allPostContent *** \(postsContent.count)")
+                self.perform(#selector(refreshTableData), with: nil, afterDelay: 1.0)
             }
         }
     }
     
     @objc
     func refreshTableData(){
-        print("reload objec")
         self.FacebookTable.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 380.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 310.0
+//    }
     
 }

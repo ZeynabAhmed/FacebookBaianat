@@ -23,9 +23,12 @@ class BusinessHelper: NSObject,PostsBusinessHelperProtocol{
             case .success(let graphqlResult):
                 if let fetchedPosts = graphqlResult.data?.posts.data?.items?.compactMap({$0?.fragments.fragAllPostsDetails}){
                     for data in fetchedPosts{
-                        postsContentArray.append(PostsContent(fName: data.user.fName, lName: data.user.lName ?? " lName ", avatar: data.user.avatar ?? " ", images: [""], video: [""], text: " ", likesCount: data.likesCount, commentsCount: data.commentsCount, sharesCount: data.sharesCount, createdAt: data.createdAt))
-                        
-                       // print(" posts content \(data)")
+//                        var contentValue:Character = 'c'
+//                        for content in data.content[0].value!{
+//                            contentValue = content
+//                        }
+                        postsContentArray.append(PostsContent(fName: data.user.fName, lName: data.user.lName ?? " lName ", avatar: data.user.avatar ?? " ", images: [""], video: [""], text: data.content[0].value ?? " ", likesCount: data.likesCount, commentsCount: data.commentsCount, sharesCount: data.sharesCount, createdAt: data.createdAt))
+                        print(" value \(data.content[0].value!)")
                     }
                 }
                 if let fetchedPageInfo = graphqlResult.data?.posts.data?.pageInfo{
@@ -34,6 +37,7 @@ class BusinessHelper: NSObject,PostsBusinessHelperProtocol{
                     pageInfo.limit = fetchedPageInfo.fragments.fragPageInfo.limit 
                   //  print(" posts content \(fetchedPageInfo)")
                 }
+                
                 subject.onNext(PostsModel(pageInfoModel: pageInfo, postsContent: postsContentArray))
             
             case .failure(let error):

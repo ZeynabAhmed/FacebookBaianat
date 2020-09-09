@@ -22,8 +22,6 @@
 		526B83D825068D2800A0D6F6 /* Posts.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 526B83D725068D2800A0D6F6 /* Posts.graphql */; };
 		526B83DB250690DB00A0D6F6 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 526B83DA250690DB00A0D6F6 /* schema.json */; };
 		526B83DD2506926500A0D6F6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B83DC2506926500A0D6F6 /* API.swift */; };
-		7D5CCECC2508210500938442 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5CCECA2508210500938442 /* PostCollectionViewCell.swift */; };
-		7D5CCECD2508210500938442 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5CCECB2508210500938442 /* PostCollectionViewCell.xib */; };
 		BF233E6625073C5700214D27 /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6525073C5700214D27 /* ApolloNetwork.swift */; };
 		BF233E6925073D6100214D27 /* BusinessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6825073D6100214D27 /* BusinessHelper.swift */; };
 		BF233E6B25073DB800214D27 /* PostsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF233E6A25073DB800214D27 /* PostsContract.swift */; };
@@ -74,8 +72,6 @@
 		526B83DA250690DB00A0D6F6 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		526B83DC2506926500A0D6F6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		64AC997EE84CE9FF442047DA /* Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig"; path = "Target Support Files/Pods-BaianatFacebook-BaianatFacebookUITests/Pods-BaianatFacebook-BaianatFacebookUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7D5CCECA2508210500938442 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
-		7D5CCECB2508210500938442 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		B287F10F1ECC39034C5065F4 /* Pods-BaianatFacebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebook.release.xcconfig"; path = "Target Support Files/Pods-BaianatFacebook/Pods-BaianatFacebook.release.xcconfig"; sourceTree = "<group>"; };
 		B74F0C184101D7A666B02D29 /* Pods-BaianatFacebookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaianatFacebookTests.debug.xcconfig"; path = "Target Support Files/Pods-BaianatFacebookTests/Pods-BaianatFacebookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF233E6525073C5700214D27 /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
@@ -223,8 +219,6 @@
 			children = (
 				526B83CB2506755B00A0D6F6 /* FacebookViewCell.swift */,
 				526B83CC2506755B00A0D6F6 /* FacebookViewCell.xib */,
-				7D5CCECA2508210500938442 /* PostCollectionViewCell.swift */,
-				7D5CCECB2508210500938442 /* PostCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -376,7 +370,6 @@
 				526B83A82506713900A0D6F6 /* LaunchScreen.storyboard in Resources */,
 				526B83A52506713900A0D6F6 /* Assets.xcassets in Resources */,
 				526B83D825068D2800A0D6F6 /* Posts.graphql in Resources */,
-				7D5CCECD2508210500938442 /* PostCollectionViewCell.xib in Resources */,
 				526B83CE2506755B00A0D6F6 /* FacebookViewCell.xib in Resources */,
 				526B83DB250690DB00A0D6F6 /* schema.json in Resources */,
 				526B83A32506713800A0D6F6 /* Main.storyboard in Resources */,
@@ -533,7 +526,6 @@
 				BF233E6F25073E4600214D27 /* PostsModel.swift in Sources */,
 				BF233E6625073C5700214D27 /* ApolloNetwork.swift in Sources */,
 				BF233E6B25073DB800214D27 /* PostsContract.swift in Sources */,
-				7D5CCECC2508210500938442 /* PostCollectionViewCell.swift in Sources */,
 				526B83DD2506926500A0D6F6 /* API.swift in Sources */,
 				BF233E6D25073DE000214D27 /* PostsPresenter.swift in Sources */,
 				526B839E2506713800A0D6F6 /* SceneDelegate.swift in Sources */,
